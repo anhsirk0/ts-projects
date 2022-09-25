@@ -9,7 +9,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-7xl">Some Typescript projects.</p>
+        <p className="text-7xl">Some React/Typescript projects.</p>
       </div>
     </>
   );
