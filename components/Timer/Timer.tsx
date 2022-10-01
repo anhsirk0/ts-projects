@@ -1,4 +1,4 @@
-import { useState, useEffect, FC, MouseEvent } from "react";
+import { useState, useEffect, FC, Fragment, MouseEvent } from "react";
 
 const Timer: FC = () => {
   const [isOn, setIsOn] = useState(false);
@@ -43,12 +43,10 @@ const Timer: FC = () => {
     <div className="flex flex-col mx-auto">
       <div className="flex items-center justify-between gap-4 px-8 py-6 mx-auto mb-8 ring ring-2 ring-sky-400 rounded-lg">
         {getTime().map((t: string, index: number) => (
-          <>
+          <Fragment key={index}>
             {index !== 0 && <p className="text-6xl text-sky-600 mb-2">: </p>}
-            <p key={index} className="text-7xl">
-              {t}
-            </p>
-          </>
+            <p className="text-7xl">{t}</p>
+          </Fragment>
         ))}
       </div>
       <div className="h-12">
