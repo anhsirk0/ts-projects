@@ -6,13 +6,13 @@ const Countdown: FC = () => {
 
   useEffect(() => {
     let intervalId: any = null;
-    if (isOn) {
+    if (isOn && time > 0) {
       intervalId = setInterval(() => {
         setTime((t) => t - 1);
       }, 1000);
     }
     return () => clearInterval(intervalId);
-  }, [isOn]);
+  }, [isOn, time]);
 
   const startCountdown = (e: MouseEvent) => {
     setIsOn(true);
