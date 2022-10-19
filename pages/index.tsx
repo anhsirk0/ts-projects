@@ -17,10 +17,10 @@ const Home: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="min-h-screen bg-gray-100 flex flex-col gap-8 items-center justify-center">
-        <p className="text-3xl">Some React/Typescript projects.</p>
+        <p className="text-3xl">Some React/Typescript components.</p>
         <ul className="list-disc space-y-4">
           {links.map((link) => (
-            <li key={link.url} className="text-4xl">
+            <li key={link.url} className="text-4xl underline">
               <Link href={link.url}>{link.title}</Link>
             </li>
           ))}

@@ -3,6 +3,11 @@ import Head from "next/head";
 import { useState } from "react";
 import { Select as SelectField } from "../components";
 
+interface SelectOption {
+  label: string;
+  value: string;
+}
+
 const Select: NextPage = () => {
   const options = [
     { label: "Homer Simpson", value: "homer" },
@@ -24,7 +29,7 @@ const Select: NextPage = () => {
         <SelectField
           value={value}
           options={options}
-          onChange={(v: { label: string; value: string }) => {
+          onChange={(v: SelectOption | undefined) => {
             setValue(v);
           }}
         />

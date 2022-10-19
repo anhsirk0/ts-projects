@@ -12,7 +12,7 @@ import {
 
 const ToggleContext = createContext({
   on: false,
-  toggle: () => { },
+  toggle: () => {},
 });
 
 function useEffectAfterMount(cb: () => void, dependencies: boolean[]) {
@@ -22,15 +22,15 @@ function useEffectAfterMount(cb: () => void, dependencies: boolean[]) {
       return cb();
     }
     justMounted.current = false;
-  }, dependencies);
+  }, [...dependencies, cb]);
 }
 
 interface ToggleProps {
   onToggle: (on: boolean) => void;
-  children: ReactElement;
+  children?: ReactElement[];
 }
 
-const ToggleButton: FC<ToggleProps> = (props) => {
+const ToggleButton = (props: ToggleProps) => {
   const [on, setOn] = useState(false);
   const toggle = useCallback(() => setOn((oldOn) => !oldOn), []);
 
@@ -38,7 +38,7 @@ const ToggleButton: FC<ToggleProps> = (props) => {
     props.onToggle(on);
   }, [on]);
 
-  const value = useMemo(() => ({ on, toggle }), [on]);
+  const value = useMemo(() => ({ on, toggle }), [on, toggle]);
 
   return (
     <ToggleContext.Provider value={value}>
@@ -67,7 +67,7 @@ const Off: FC<{ children: ReactElement }> = ({ children }) => {
   return on ? null : children;
 };
 
-const Switch = () => {
+const Switch: FC = () => {
   const { on, toggle } = useToggleContext();
 
   return (
@@ -83,8 +83,12 @@ const Switch = () => {
   );
 };
 
-(ToggleButton as any).On = On;
-(ToggleButton as any).Off = Off;
-(ToggleButton as any).Switch = Switch;
+ToggleButton.On = On;
+ToggleButton.Off = Off;
+ToggleButton.Switch = Switch;
+
+/* (ToggleButton as any).On = On;
+ * (ToggleButton as any).Off = Off;
+ * (ToggleButton as any).Switch = Switch; */
 
 export default ToggleButton;
