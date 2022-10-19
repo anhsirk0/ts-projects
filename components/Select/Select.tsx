@@ -34,15 +34,13 @@ const Select: FC<SelectProps> = ({ value, options, onChange }) => {
         <div className="flex w-full justify-between px-8 py-6 bg-white rounded-lg shadow-lg cursor-pointer">
           <p className="text-xl">{value?.label}</p>
           <ChevronUpIcon
-            className={`h-5 w-5 font-bold transition duration-300 ${
-              isOpen ? "" : "rotate-180"
-            }`}
+            className={`h-5 w-5 font-bold transition duration-300 ${isOpen ? "" : "rotate-180"
+              }`}
           />
         </div>
         <ul
-          className={`list-none w-full bg-white rounded-lg shadow-lg overflow-hidden ${
-            isOpen ? "block animate-fade" : "hidden"
-          }`}
+          className={`list-none w-full bg-white rounded-lg shadow-lg overflow-hidden ${isOpen ? "block animate-fade" : "hidden"
+            }`}
         >
           {options.map((option) => (
             <li
@@ -51,9 +49,8 @@ const Select: FC<SelectProps> = ({ value, options, onChange }) => {
                 selectOption(option);
               }}
               key={option.value}
-              className={`px-8 py-6 text-xl hover:bg-indigo-200 cursor-pointer ${
-                option.label === value?.label ? "bg-indigo-300" : ""
-              }`}
+              className={`px-8 py-6 text-xl hover:bg-indigo-200 cursor-pointer ${option.label === value?.label ? "bg-indigo-300" : ""
+                }`}
             >
               {option.label}
             </li>

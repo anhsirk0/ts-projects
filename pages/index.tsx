@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <title>TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen flex flex-col gap-8 items-center justify-center">
+      <div className="min-h-screen bg-gray-100 flex flex-col gap-8 items-center justify-center">
         <p className="text-3xl">Some React/Typescript projects.</p>
         <ul className="list-disc space-y-4">
           {links.map((link) => (

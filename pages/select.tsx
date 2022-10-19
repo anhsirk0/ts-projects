@@ -19,7 +19,7 @@ const Select: NextPage = () => {
         <title>Select - TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen bg-gray-100">
+      <div className="min-h-screen">
         <p className="text-7xl text-center py-24">Select component.</p>
         <SelectField
           value={value}
