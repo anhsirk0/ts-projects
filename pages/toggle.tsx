@@ -9,8 +9,8 @@ const Toggle: NextPage = () => {
         <title>Toggle - TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen flex flex-col gap-8 md:gap-16 items-center justify-center">
-        <p className="text-7xl">Toggle compound component</p>
+      <div className="min-h-screen p-4 flex flex-col gap-8 md:gap-16 items-center justify-center">
+        <p className="text-2xl md:text-3xl lg:text-7xl">Toggle compound component</p>
         <ToggleButton onToggle={(on: boolean) => console.log(on)}>
           <ToggleButton.Switch />
           <ToggleButton.On>

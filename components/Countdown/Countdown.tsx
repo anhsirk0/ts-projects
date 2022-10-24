@@ -1,4 +1,5 @@
 import { useState, useEffect, FC, Fragment, MouseEvent } from "react";
+import { Button } from "../../components";
 
 const Countdown: FC = () => {
   const [isOn, setIsOn] = useState(false);
@@ -42,9 +43,13 @@ const Countdown: FC = () => {
       <div className="flex items-center justify-between gap-4 px-8 py-6 mx-auto mb-8 ring ring-2 ring-sky-400 rounded-lg h-32">
         {isOn ? (
           <>
-            <p className="text-7xl p-2 w-28 text-center">{getMinutes()}</p>
+            <p className="text-5xl md:text-7xl p-2 w-28 text-center">
+              {getMinutes()}
+            </p>
             <p className="text-6xl text-sky-600 mb-2">: </p>
-            <p className="text-7xl p-2 w-28 text-center">{getSeconds()}</p>
+            <p className="text-5xl md:text-7xl p-2 w-28 text-center">
+              {getSeconds()}
+            </p>
           </>
         ) : (
           <>
@@ -80,24 +85,9 @@ const Countdown: FC = () => {
             )} */}
       </div>
       <div className="flex gap-4 p-4 my-4 mx-auto">
-        <button
-          onClick={startCountdown}
-          className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
-        >
-          Start
-        </button>
-        <button
-          onClick={pauseCountdown}
-          className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
-        >
-          Pause
-        </button>
-        <button
-          onClick={resetCountdown}
-          className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
-        >
-          Reset
-        </button>
+        <Button onClick={startCountdown} title="Start" />
+        <Button onClick={pauseCountdown} title="Pause" />
+        <Button onClick={resetCountdown} title="Reset" />
       </div>
     </div>
   );

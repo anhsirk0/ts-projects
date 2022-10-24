@@ -1,4 +1,5 @@
 import { useState, useEffect, FC, Fragment, MouseEvent } from "react";
+import { Button } from "../../components";
 
 const Timer: FC = () => {
   const [isOn, setIsOn] = useState(false);
@@ -44,35 +45,24 @@ const Timer: FC = () => {
       <div className="flex items-center justify-between gap-4 px-8 py-6 mx-auto mb-8 ring ring-2 ring-sky-400 rounded-lg">
         {getTime().map((t: string, index: number) => (
           <Fragment key={index}>
-            {index !== 0 && <p className="text-6xl text-sky-600 mb-2">: </p>}
-            <p className="text-7xl">{t}</p>
+            {index !== 0 && (
+              <p className="text-5xl md:text-7xl text-sky-600 mb-2">:</p>
+            )}
+            <p className="text-5xl md:text-6xl lg:text-7xl">{t}</p>
           </Fragment>
         ))}
       </div>
       <div className="h-12">
         {time > 0 && !isOn && (
-          <p className="text-3xl text-center text-gray-700">Paused</p>
+          <p className="text-lg md:text-2xl lg:text-3xl text-center text-gray-700">
+            Paused
+          </p>
         )}
       </div>
       <div className="flex gap-4 p-4 my-4 mx-auto">
-        <button
-          onClick={startTimer}
-          className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
-        >
-          Start
-        </button>
-        <button
-          onClick={pauseTimer}
-          className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
-        >
-          Pause
-        </button>
-        <button
-          onClick={resetTimer}
-          className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
-        >
-          Reset
-        </button>
+        <Button onClick={startTimer} title="start" />
+        <Button onClick={pauseTimer} title="pause" />
+        <Button onClick={resetTimer} title="Reset" />
       </div>
     </div>
   );

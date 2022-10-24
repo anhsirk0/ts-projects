@@ -11,7 +11,7 @@ const Hero: NextPage = () => {
       </Head>
 
       <div
-        className="min-h-screen relative flex items-center justify-center bg-cover"
+        className="min-h-screen p-4 relative flex items-center justify-center bg-cover"
         style={{
           backgroundImage: `url("https://placeimg.com/1200/800/arch")`,
         }}
