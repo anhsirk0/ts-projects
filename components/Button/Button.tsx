@@ -1,15 +1,15 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 
 interface ButtonProps {
-  onClick: () => void;
+  onClick: (e: MouseEvent) => void;
   title: string;
 }
 
-const Button: FC = ({ onClick, title }) => {
+const Button: FC<ButtonProps> = ({ onClick, title }) => {
   return (
     <button
       onClick={onClick}
-      className="py-3 px-6 bg-sky-300 hover:bg-sky-400 rounded-lg shadow-lg"
+      className="py-3 px-6 bg-sky-300 hover:bg-sky-400 active:scale-105 transition duration-75 rounded-lg shadow-lg"
     >
       {title}
     </button>
