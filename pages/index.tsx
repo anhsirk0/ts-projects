@@ -17,17 +17,21 @@ const Home: NextPage = () => {
         <title>TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen p-4 bg-gray-100 flex flex-col gap-8 items-center justify-center">
-        <p className="text-xl md:text-3xl text-center text-gray-600">
+      <div className="min-h-screen p-4 bg-gradient-to-r from-rose-400 to-pink-600 flex flex-col gap-8 items-center justify-center">
+        <p className="text-xl md:text-3xl text-center text-white">
           Some React + TS components.
         </p>
-        <ul className="list-disc space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {links.map((link) => (
-            <li key={link.url} className="text-3xl md:text-4xl underline">
-              <Link href={link.url}>{link.title}</Link>
-            </li>
+            <Link className="ring-rose-500" key={link.url} href={link.url}>
+              <a className="flex items-center justify-center px-8 h-20 md:h-24 bg-white rounded-2xl shadow cursor-pointer hover:bg-opacity-95 hover:shadow-lg">
+                <span className="text-3xl md:text-4xl text-center text-gray-700">
+                  {link.title}
+                </span>
+              </a>
+            </Link>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

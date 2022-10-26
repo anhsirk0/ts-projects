@@ -16,7 +16,7 @@ const Select: NextPage = () => {
     { label: "Marge Simpson", value: "marge" },
     { label: "Maggie Simpson", value: "maggie" },
   ];
-  const [value, setValue] = useState<typeof options[0] | undefined>(options[0]);
+  const [value, setValue] = useState<typeof options[0] | undefined>(options[1]);
 
   return (
     <>
@@ -24,10 +24,7 @@ const Select: NextPage = () => {
         <title>Select - TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen p-4">
-        <p className="text-2xl md:text-3xl lg:text-7xl text-center py-12 md:py-20 lg:py-24">
-          Select component.
-        </p>
+      <div className="min-h-screen p-4 bg-gradient-to-r from-orange-400 to-rose-400">
         <SelectField
           value={value}
           options={options}
