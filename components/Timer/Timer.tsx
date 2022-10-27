@@ -41,8 +41,8 @@ const Timer: FC = () => {
   };
 
   return (
-    <div className="flex flex-col mx-auto">
-      <div className="flex items-center justify-between gap-4 px-8 py-6 mx-auto mb-8 ring ring-2 ring-sky-400 rounded-lg">
+    <div className="flex flex-col gap-4 mx-auto">
+      <div className="flex items-center justify-between gap-4 px-8 mx-auto">
         {getTime().map((t: string, index: number) => (
           <Fragment key={index}>
             {index !== 0 && (
@@ -52,14 +52,14 @@ const Timer: FC = () => {
           </Fragment>
         ))}
       </div>
-      <div className="h-12">
+      <div className="h-6 my-2">
         {time > 0 && !isOn && (
           <p className="text-lg md:text-2xl lg:text-3xl text-center text-gray-700">
             Paused
           </p>
         )}
       </div>
-      <div className="flex gap-4 p-4 my-4 mx-auto">
+      <div className="flex gap-4 my-2 w-full">
         <Button onClick={startTimer} title="start" />
         <Button onClick={pauseTimer} title="pause" />
         <Button onClick={resetTimer} title="Reset" />

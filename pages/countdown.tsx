@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Countdown as CountdownComponent } from "../components";
+import { Card, Countdown as CountdownComponent } from "../components";
 
 const Countdown: NextPage = () => {
   return (
@@ -9,9 +9,10 @@ const Countdown: NextPage = () => {
         <title>Countdown - TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen p-4 bg-gray-100">
-        <p className="text-2xl md:text-3xl lg:text-7xl text-center py-24">Countdown</p>
-        <CountdownComponent />
+      <div className="min-h-screen p-4 bg-gradient-to-r from-green-200 via-green-400 to-green-500 flex items-center justify-center">
+        <Card title="Countdown">
+          <CountdownComponent />
+        </Card>
       </div>
     </>
   );

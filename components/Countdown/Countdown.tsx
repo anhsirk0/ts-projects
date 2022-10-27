@@ -16,7 +16,7 @@ const Countdown: FC = () => {
   }, [isOn, time]);
 
   const startCountdown = (e: MouseEvent) => {
-    setIsOn(true);
+    if (time > 0) setIsOn(true);
   };
 
   const pauseCountdown = (e: MouseEvent) => {
@@ -39,8 +39,8 @@ const Countdown: FC = () => {
   }
 
   return (
-    <div className="flex flex-col mx-auto">
-      <div className="flex items-center justify-between gap-4 px-8 py-6 mx-auto mb-8 ring ring-2 ring-sky-400 rounded-lg h-32">
+    <div className="flex flex-col gap-4 mx-auto">
+      <div className="flex items-center justify-between gap-4 px-8 mx-auto h-32">
         {isOn ? (
           <>
             <p className="text-5xl md:text-7xl p-2 w-28 text-center">
@@ -79,12 +79,12 @@ const Countdown: FC = () => {
           </>
         )}
       </div>
-      <div className="h-12">
-        {/* {time > 0 && !isOn && (
-            <p className="text-3xl text-center text-gray-700">Paused</p>
-            )} */}
+      <div className="h-6 my-2">
+        {time > 0 && !isOn && (
+          <p className="text-3xl text-center text-gray-700">Paused</p>
+        )}
       </div>
-      <div className="flex gap-4 p-4 my-4 mx-auto">
+      <div className="flex gap-4 my-2 w-full">
         <Button onClick={startCountdown} title="Start" />
         <Button onClick={pauseCountdown} title="Pause" />
         <Button onClick={resetCountdown} title="Reset" />
