@@ -4,3 +4,4 @@ export { default as Timer } from "./Timer/Timer";
 export { default as Countdown } from "./Countdown/Countdown";
 export { default as Button } from "./Button/Button";
 export { default as Card } from "./Card/Card";
+export { default as BottomNavbar } from "./BottomNavbar/BottomNavbar";

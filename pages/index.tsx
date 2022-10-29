@@ -9,6 +9,7 @@ const Home: NextPage = () => {
     { title: "Timer", url: "/timer" },
     { title: "Countdown", url: "/countdown" },
     { title: "Hero", url: "/hero" },
+    { title: "Bottom Navbar", url: "/bottom-navbar" },
   ];
 
   return (
