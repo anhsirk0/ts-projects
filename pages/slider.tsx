@@ -9,7 +9,7 @@ const Slider: NextPage = () => {
         <title>Slider - TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="h-screen w-screen bg-gradient-to-r from-sky-300 to-blue-500 p-4 flex flex-col items-center justify-center">
+      <div className="h-screen w-screen bg-purple-100 p-4 flex flex-col items-center justify-center">
         <SliderLoginSignup />
       </div>
     </>
