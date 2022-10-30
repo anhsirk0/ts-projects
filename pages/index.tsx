@@ -10,6 +10,7 @@ const Home: NextPage = () => {
     { title: "Countdown", url: "/countdown" },
     { title: "Hero", url: "/hero" },
     { title: "Bottom Navbar", url: "/bottom-navbar" },
+    { title: "Slider Login/Signup", url: "/slider" },
   ];
 
   return (
@@ -25,8 +26,8 @@ const Home: NextPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {links.map((link) => (
             <Link className="ring-rose-500" key={link.url} href={link.url}>
-              <a className="flex items-center justify-center px-8 h-20 md:h-24 bg-white rounded-2xl shadow cursor-pointer hover:bg-opacity-95 hover:shadow-lg">
-                <span className="text-3xl md:text-4xl text-center text-gray-700">
+              <a className="flex items-center justify-center px-8 h-20 md:h-24 lg:h-28 bg-white rounded-2xl shadow cursor-pointer hover:bg-opacity-95 hover:shadow-lg">
+                <span className="text-2xl md:text-3xl text-center text-gray-700">
                   {link.title}
                 </span>
               </a>
