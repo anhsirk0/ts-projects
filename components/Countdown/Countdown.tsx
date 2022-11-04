@@ -75,6 +75,7 @@ const Countdown: FC = () => {
               min={0}
               max={60}
               value={getSeconds()}
+              autoFocus
             />
           </>
         )}
