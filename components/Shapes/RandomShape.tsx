@@ -34,17 +34,27 @@ const RandomShape: FC<Props> = ({ classes = "", color = "" }) => {
       color={color}
       key={3}
     />,
-    <DynamicTriangle
-      classes={classes + " -scale-x-100"}
+    <DynamicQuarterCircle
+      classes={classes + " -scale-x-100 -scale-y-100"}
       color={color}
       key={4}
     />,
     <DynamicTriangle
-      classes={classes + " -scale-y-100"}
+      classes={classes + " -scale-x-100"}
       color={color}
       key={5}
     />,
-    <DynamicTriangle classes={classes} color={color} key={6} />,
+    <DynamicTriangle
+      classes={classes + " -scale-y-100"}
+      color={color}
+      key={6}
+    />,
+    <DynamicTriangle
+      classes={classes + " -scale-x-100 -scale-y-100"}
+      color={color}
+      key={7}
+    />,
+    <DynamicTriangle classes={classes} color={color} key={8} />,
   ];
 
   return allShapes[getRandomInt(allShapes.length)];

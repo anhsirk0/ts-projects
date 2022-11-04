@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Fragment } from "react";
-import { RandomShape } from "../components/Shapes";
+import { RandomShape, QuarterCircle } from "../components/Shapes";
 import { getRandomInt } from "../helpers";
 
 const Pattern: NextPage = () => {
