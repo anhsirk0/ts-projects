@@ -1,18 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Fragment } from "react";
-import {
-  Circle,
-  SemiCircle,
-  Triangle,
-  RandomShape,
-} from "../components/Shapes";
+import { RandomShape } from "../components/Shapes";
+import { getRandomInt } from "../helpers";
 
 const Pattern: NextPage = () => {
-  function getRandomInt(n: number) {
-    return Math.floor(Math.random() * n);
-  }
-
   const bgChoices = ["bg-blue-200", "bg-transparent"];
   const colorChoices = ["bg-blue-200", "bg-blue-600", "bg-blue-600"];
 
@@ -26,7 +18,6 @@ const Pattern: NextPage = () => {
         <div className="grid grid-cols-8 grid-rows-8 w-96 h-96 lg:w-[45rem] lg:h-[45rem] 2xl:w-[55rem] 2xl:h-[55rem]">
           {Array.from(Array(64).keys()).map((idx) => (
             <RandomShape
-              num={getRandomInt(7)}
               color={colorChoices[getRandomInt(colorChoices.length)]}
               classes={bgChoices[getRandomInt(bgChoices.length)]}
               key={idx}
