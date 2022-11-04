@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Circle, SemiCircle, Triangle } from ".";
+import { Circle, QuarterCircle, Triangle } from ".";
 import dynamic from "next/dynamic";
 
 interface Props {
@@ -17,7 +17,7 @@ const RandomShape: FC<Props> = ({ num = 1, classes = "", color = "" }) => {
     ssr: false,
   });
 
-  const DynamicSemiCircle = dynamic(() => import("./SemiCircle"), {
+  const DynamicQuarterCircle = dynamic(() => import("./QuarterCircle"), {
     ssr: false,
   });
 
@@ -25,14 +25,14 @@ const RandomShape: FC<Props> = ({ num = 1, classes = "", color = "" }) => {
     case 0:
       return <DynamicCircle classes={classes} color={color} />;
     case 1:
-      return <DynamicSemiCircle classes={classes} color={color} />;
+      return <DynamicQuarterCircle classes={classes} color={color} />;
     case 2:
       return (
-        <DynamicSemiCircle classes={classes + " -scale-x-100"} color={color} />
+        <DynamicQuarterCircle classes={classes + " -scale-x-100"} color={color} />
       );
     case 3:
       return (
-        <DynamicSemiCircle classes={classes + " -scale-y-100"} color={color} />
+        <DynamicQuarterCircle classes={classes + " -scale-y-100"} color={color} />
       );
     case 4:
       return (

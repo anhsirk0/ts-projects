@@ -5,7 +5,7 @@ interface Props {
   color?: string;
 }
 
-const SemiCircle: FC<Props> = ({ classes = "", color = "bg-blue-600" }) => {
+const QuarterCircle: FC<Props> = ({ classes = "", color = "bg-blue-600" }) => {
   return (
     <div className={`h-full w-full overflow-hidden ${classes}`}>
       <div className={`h-full w-full rounded-tl-full ${color}`} />
@@ -13,4 +13,4 @@ const SemiCircle: FC<Props> = ({ classes = "", color = "bg-blue-600" }) => {
   );
 };
 
-export default SemiCircle;
+export default QuarterCircle;
