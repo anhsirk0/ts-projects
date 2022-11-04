@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     { title: "Hero", url: "/hero" },
     { title: "Bottom Navbar", url: "/bottom-navbar" },
     { title: "Slider Login/Signup", url: "/slider" },
-    { title: "Geometric pattern", url: "/pattern" },
+    { title: "Random Geometric pattern", url: "/pattern" },
   ];
 
   return (
