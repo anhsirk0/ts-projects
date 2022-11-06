@@ -47,7 +47,11 @@ const BottomNavbar = () => {
       </div>
       <div className="bg-gray-50 px-12 py-2 rounded-xl h-28 hidden lg:block">
         <div
-          className={`absolute before:block before:absolute before:h-8 before:w-8 before:-left-[1.8rem] before:top-14 before:rounded-tr-[6rem] before:shadow-[0_-10px_0_0_rgb(17,24,39)] after:block after:absolute after:h-8 after:w-8 after:-right-[1.8rem] after:top-14 after:rounded-tl-[6rem] after:shadow-[0_-10px_0_0_rgb(17,24,39)] bg-emerald-400 rounded-full h-24 w-24 -translate-y-16 ring-8 ring-gray-900 transition duration-700 ${activeLink.translateClass}`}
+          className={`
+before:block before:absolute before:h-8 before:w-8 before:-left-[1.8rem] before:top-14 before:rounded-tr-[6rem] before:shadow-[0_-10px_0_0_rgb(17,24,39)]
+after:block after:absolute after:h-8 after:w-8 after:-right-[1.8rem] after:top-14 after:rounded-tl-[6rem] after:shadow-[0_-10px_0_0_rgb(17,24,39)]
+bg-emerald-400 rounded-full h-24 w-24 -translate-y-16 ring-8 ring-gray-900 transition duration-700 absolute ${activeLink.translateClass}
+          `}
         />
         <ul className="flex flex-row items-center gap-2 md:gap-4 lg:gap-12 relative">
           {links.map((link, index) => (
