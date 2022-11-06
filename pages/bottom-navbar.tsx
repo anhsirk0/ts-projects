@@ -10,7 +10,7 @@ const BottomNav: NextPage = () => {
         <title>BottomNav - TS Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 bg-gradient-to-r p-4 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-900 p-4 flex items-center justify-center">
         <BottomNavbar />
       </div>
     </>
